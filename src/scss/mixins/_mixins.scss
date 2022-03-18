@@ -1,0 +1,26 @@
+@use '../colores/colores' as c;
+
+@mixin tecla($ancho, $alto) {
+    background-color: c.$amarillo;
+    color: c.$negro;
+    width: $ancho;
+    height: $alto;
+    border: none;
+}
+
+@mixin teclaHover {
+    background-color: c.$negro;
+    color: c.$blanco;
+}
+
+@mixin telefono {
+    @media(max-width: 488px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
