@@ -26,6 +26,7 @@ function Calculadora({numero, history, setNumero, setHistory}) {
 
    
   const handleResult = (e) => {
+    // eslint-disable-next-line no-eval
     setNumero(numero = eval(numero).toString()); 
     if(numero === "Infinity") {
       setHistory(history += e.target.innerText + 0);
